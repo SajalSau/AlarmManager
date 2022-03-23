@@ -2,16 +2,16 @@
 
 -- Steps to build the maven projects (alarmManager and alarmProcessor)
 
-1. In terminal Go to the directory yourDirectory/Projects/alarmProcessor and run 
+1. In terminal Go to the directory yourDirectory/AlarmManager/alarmProcessor and run 
    a. mvn --settings ../settings.xml  clean install -DskipTests
    b. docker build -t alarm-processor .
 
-2. In terminal Go to the directory yourDirectory/Projects/alarmManager and run
+2. In terminal Go to the directory yourDirectory/AlarmManager/alarmManager and run
    a. mvn --settings ../settings.xml  clean install
    b. docker build -t alarm-manager .
 
 -- Steps to run docker-compose
-1. In terminal Go to the directory yourDirectory/Projects
+1. In terminal Go to the directory yourDirectory/AlarmManager
 2. to start the containers :  docker-compose -f Kafka.yml up -d
 3. If containers needs to be stopped for some reason then please run : docker-compose -f Kafka.yml down
 
