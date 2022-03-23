@@ -1,0 +1,13 @@
+spring.cloud.stream:
+  function:
+    definition: alarmProcessor
+  kafka:
+    binder:
+      brokers: "kafka:29092"
+  bindings:
+    alarmProcessor-in-0:
+      destination: "vnoc-alarms"
+      consumer:
+        configuration:
+           value:
+            deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
