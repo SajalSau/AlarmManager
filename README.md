@@ -39,4 +39,3 @@
 -- Stopping the containers 
 1. In terminal docker-compose -f Kafka.yml down
 
-
